@@ -33,7 +33,7 @@ export default function Subcategories(){
             </th>
 
          </tr>
-         {subcategories.map((data)=>( <tr className="border border-black text-center py-2 h-fit">
+         {subcategories.map((data ,ind)=>( <tr key={ind} className="border border-black text-center py-2 h-fit">
                 <td className="border border-black py-2 flex justify-center"><img className="" height={50} width={100} src={data.thumbnail}/></td>
                 <td className="border border-black py-2">{data.category}</td>
 

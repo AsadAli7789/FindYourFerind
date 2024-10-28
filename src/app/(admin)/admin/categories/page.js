@@ -29,7 +29,7 @@ export default function Categories(){
                 <th className="border border-black">description</th>
 
              </tr>
-             {categories.map((data)=>( <tr className="border border-black text-center  py-2 h-fit">
+             {categories.map((data ,ind)=>( <tr key={ind} className="border border-black text-center  py-2 h-fit">
                     <td className="border border-black py-2 flex justify-center  "><img className="" height={50} width={100} src={data.thumbnail}/></td>
                     <td className="border border-black py-2">{data.title}</td>
                     <td className="border border-black py-2">{data.description}</td>

@@ -28,7 +28,7 @@ export default function Evnt(){
             <th className="border border-black py-2">Date
 </th>
          </tr>
-         {events.map((data)=>( <tr className="border border-black text-center py-2 h-fit">
+         {events.map((data ,ind)=>( <tr key={ind} className="border border-black text-center py-2 h-fit">
                 <td className="border border-black flex justify-center"><img className="rounded-full" height={30} width={50} src={data.thumbnail}/></td>
                 <td className="border border-black">{data.title}</td>
                 <td className="border border-black">{data.description}</td>

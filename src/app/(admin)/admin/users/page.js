@@ -36,7 +36,7 @@ export default function Users(){
                 <th className="border border-black">Events
 </th>
              </tr>
-             {users.map((data)=>( <tr className="border border-black text-center py-2 h-fit">
+             {users.map((data,ind)=>( <tr key={ind} className="border border-black text-center py-2 h-fit">
                     <td className="border border-black flex justify-center"><img className="rounded-full" height={30} width={50} src={data.profileImage}/></td>
                     <td className="border border-black">{data.fullname}</td>
                     <td className="border border-black">{data.email}</td>
