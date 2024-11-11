@@ -6,7 +6,7 @@ const userSchema = new Schema({
   email: String,
   password: String,
   location: {
-    lat: Number,
+    lat: Number, 
     long: Number,
   },
   profileImg: String,

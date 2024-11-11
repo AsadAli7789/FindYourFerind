@@ -1,3 +1,7 @@
+
+// import bcrypt from "bcrypt";
+// import jwt from "jsonwebtoken";
+
 import { connectDB } from "@/lib/db/connectDB";
 import { UserModal } from "@/lib/models/User";
 
@@ -16,16 +20,15 @@ export async function GET(request) {
 export async function POST(request) {
   await connectDB();
   const obj = await request.json();
-  let newUser = new UserModal(obj);
-  await newUser.save();
+  let newuser = new UserModal(obj);
+   await newuser.save()
 
-  return Response.json(
-    {
-      msg: "Users Added Successfully ",
-      user: newUser,
-    },
-    { status: 201 }
-  );
+
+    return Response.json(newuser,{ msg:"data is added ",status:"201",}
+     
+    )
+
+
 }
 
 export async function PUT(request) {}

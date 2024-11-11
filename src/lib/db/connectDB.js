@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 export async function connectDB() {
   try {
-    let connection = await mongoose.connect(process.env.MONGODB_URI);
-    console.log("Mongodb Connected");
+    let connection = await mongoose.connect("mongodb+srv://asad:asad@asad.qxzyt.mongodb.net/FYF");
+    console.info("asad");
   } catch (err) {
     console.log("err in connection=>", err);
   }
