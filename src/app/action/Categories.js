@@ -1,10 +1,10 @@
 
 
-export const addCategory = async (obj) => {
+export const ADDCategory = async (obj) => {
   
   try{
 
-      const added = await fetch(`http://localhost:3001/api/categories`, {
+      const added = await fetch(`http://localhost:3000/api/categories`, {
         method: "POST",
         body: JSON.stringify(obj),
       });
@@ -14,5 +14,15 @@ export const addCategory = async (obj) => {
       }
   }
   catch(err){console.log(err)}
+  };
+  
+  
+export const GetCategory = async () => {
+  
+  let categories = await fetch(`http://localhost:3000/api/categories`);
+  categories = await categories.json();
+  console.log("Category Fetched successfully");
+  return categories;
+
   };
   

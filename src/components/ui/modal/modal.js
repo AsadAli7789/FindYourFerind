@@ -1,23 +1,15 @@
+'use client';
 
 import { addCategory } from '@/app/action/Categories';
 import React from 'react';
-import { useForm, SubmitHandler } from "react-hook-form"
+import { AddCategory } from '../addcategories/Addcategories';
 
 
 const Modal1 = () => {
 
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm()
 
-  const onSubmit = (data) => {console.log(data)
-  addCategory(data)
-    document.getElementById('my_modal_3').close()
 
-  }
+ 
 
     return (
     <>
@@ -30,7 +22,7 @@ const Modal1 = () => {
     </form>
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6 text-gray-800">Contact Us</h2>
-      <form className="space-y-4" onSubmit={handleSubmit(onSubmit)} >
+      <form className="space-y-4" action={AddCategory} >
         <div>
           <label htmlFor="name"               className="block text-sm font-medium text-gray-700 mb-1">
           title
@@ -41,7 +33,7 @@ const Modal1 = () => {
             name="title"
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
-            {...register("title")}
+        
           />
         </div>
         <div>
@@ -54,17 +46,17 @@ const Modal1 = () => {
             name="description"
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
-            {...register("description")}
+
           />
         </div>
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-          detail
+          thumbnail
           </label>
           <textarea
             id="message"
-            name="detail"
-            {...register("detail")}
+            name="thumbnail"
+   
             rows={4}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
