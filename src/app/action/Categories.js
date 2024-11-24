@@ -1,7 +1,7 @@
 
 
 export const ADDCategory = async (obj) => {
-  
+  console.log(obj)
   try{
 
       const added = await fetch(`http://localhost:3000/api/categories`, {
